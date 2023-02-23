@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand text-white">Dashboard</a>
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onModify()">Modify Profil</button>
+  <button class="btn btn-danger my-2 my-sm-1" (click)="onVerify()">Verify Profil</button>
+  <button class="btn btn-danger my-2 my-sm-2" (click)="onAvailableOrders()">Active Orders</button>
+  <button class="btn btn-danger my-2 my-sm-3" (click)="onCurrentOrders()">Complete Order</button>
+  <button class="btn btn-danger my-2 my-sm-4" (click)="onAddProduct()">Add Product</button>
+  <button class="btn btn-danger my-2 my-sm-5" (click)="onHistoryOrders()">History Orders</button>
+  <button class="btn btn-danger my-2 my-sm-6" (click)="onLogout()">Logout</button>
+  
+</nav>
+<h3>Order food</h3>
+<div *ngFor="let product of products" class="card m-5" style="width:18rem" >
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Name : </strong>{{product.name}}</li>
+    <li class="list-group-item"><strong>Description : </strong>{{product.description}}</li>
+    <li class="list-group-item"><strong>Price : </strong>{{product.price}}</li>
+    <li class="list-group-item"><strong>No : </strong>{{product.id}}</li>
+    <li class="list-group-item"><button (click)="onClickDetails(product.id,product.name,product.price)">Add</button></li>
+  </ul>
+</div>

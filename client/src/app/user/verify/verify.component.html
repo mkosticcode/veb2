@@ -1,0 +1,11 @@
+<div *ngFor="let user of users" class="card m-5" style="width:18rem" >
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Username : </strong>{{user.username}}</li>
+    <li class="list-group-item"><strong>Email : </strong>{{user.email}}</li>
+    <li class="list-group-item"><strong>Name : </strong>{{user.name}}</li>
+    <li class="list-group-item"><strong>Lastname : </strong>{{user.lastName}}</li>
+    <li class="list-group-item"><strong>Status : </strong>{{user.verification}}</li>
+    <li class="list-group-item"><button (click)="onClickVerify(user.email)">Verify</button><button (click)="onClickReject(user.email)">Reject</button></li>
+
+  </ul>
+</div>

@@ -1,0 +1,37 @@
+<h3>Current order</h3>
+<div>
+
+<ul class="list-group">
+  <li class="list-group-item"><strong>Remaining time : </strong>{{remainingTime}}</li>
+</ul>
+</div>
+<div *ngFor="let order of orders" class="card m-5" style="width:18rem" >
+  
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Name : </strong>{{order.name}}</li>
+    <li class="list-group-item"><strong>Price For Meal : </strong>{{order.price*order.amount}}</li>
+    <li class="list-group-item"><strong>Amount : </strong>{{order.amount}}</li>
+
+  </ul>
+</div>
+<div class="card m-5" style="width:18rem" >
+<ul class="list-group">
+  <li class="list-group-item"><strong>Total price : </strong>{{totalPrice}}</li>
+  <form [formGroup]="orderForm" >
+    <div class="form-group required">
+      <label>Comment:</label>
+      <input class="form-control" formControlName="Comment">
+    </div>
+    <div class="form-group required">
+      <label>Adress</label>
+      <input class="form-control" formControlName="Adress">
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group col-md-8 offset-md-2">
+        <button type="submit" class="btn btn-lg btn-block" (click)="onSubmit()" >Order</button>
+      </div>
+    </div>
+  </form>
+</ul>
+</div>

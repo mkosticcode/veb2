@@ -1,0 +1,59 @@
+<form [formGroup]="registrationForm" >
+  <div class="form-group required">
+    <label>Username</label>
+    <input class="form-control" formControlName="UserName">
+  </div>
+  <div class="form-group required">
+    <label>Email</label>
+    <input class="form-control" formControlName="Email">
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" formControlName="Name">
+  </div>
+
+  <div class="form-group">
+    <label>Last Name</label>
+    <input class="form-control" formControlName="LastName">
+  </div>
+  <div class="form-group">
+    <label>Role</label>
+    <select class="form-control" formControlName="Role">
+      <option value=1>User</option>
+      <option value=2>Delivery</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>BirthDay</label>
+    <input class="form-control" formControlName="BirthDay" type="date">
+  </div>
+  <div class="form-group">
+    <label>Adress</label>
+    <input class="form-control" formControlName="Adress">
+  </div>
+  
+  
+    <div class="form-group required">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="Password">
+    </div>
+    <div class="form-group required">
+      <label>Repeat Password</label>
+      <input type="password" class="form-control" formControlName="Password2">
+    </div>
+    <div class="form-group required">
+      <label>Image</label>
+      <input type="file" class="form-control" formControlName="Image">
+    </div>
+    <div class="form-group required">
+      <label>Image</label>
+      <img src="{{imageSrc}}" alt="{{imageAlt}}" />
+      <input type="image" class="form-control" src="/src/assets/img/single_user.png"  formControlName="ImageSrc">
+    </div>
+    <img src="/assets/img/single_user.png" class="mx-auto d-block" id="i">
+  <div class="form-row">
+    <div class="form-group col-md-8 offset-md-2">
+      <button type="submit" class="btn btn-lg btn-block" (click)="onSubmit()" >Sign Up</button>
+    </div>
+  </div>
+</form>

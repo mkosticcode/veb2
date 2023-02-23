@@ -1,0 +1,16 @@
+<img src="/assets/img/single_user.png" class="mx-auto d-block">
+<form [formGroup]="loginForm" class="mb-4" autocomplete="off">
+  <div class="form-group">
+    <label>Email</label>
+    <input class="form-control" formControlName="email" >
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" class="form-control"  formControlName="password">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8 offset-md-2">
+      <button type="button" class="btn btn-lg btn-light btn-block" (click)="onSubmit()">Login</button>
+    </div>
+  </div>
+</form>

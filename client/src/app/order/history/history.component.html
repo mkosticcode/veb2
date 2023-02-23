@@ -1,0 +1,13 @@
+<h3>Previous orders</h3>
+<div *ngFor="let order of orders" class="card m-5" style="width:18rem" >
+  <div *ngFor="let product of order.products"  >
+    <ul class="list-group">
+      <li class="list-group-item"><strong>{{product.item1}} : </strong>{{product.item2}}</li>
+    </ul>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Adress : </strong>{{order.adress}}</li>
+    <li class="list-group-item"><strong>Comment : </strong>{{order.comment}}</li>
+    <li class="list-group-item"><strong>Price : </strong>{{order.price}}</li>
+  </ul>
+</div>

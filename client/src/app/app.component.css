@@ -1,0 +1,6 @@
+.container{
+    background-image: url(//src/assets/img/food_delivery.png);
+}
+body {
+    background-image: url(/src/assets/img/food_delivery.png);
+}
